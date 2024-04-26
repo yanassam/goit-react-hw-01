@@ -1,31 +1,30 @@
 
-// const TransactionHistory = ({items}) => {
-//   return (
-//     <div>
-//       <table>
-//   <thead>
-//     <tr>
-//       <th>Type</th>
-//       <th>Amount</th>
-//       <th>Currency</th>
-//     </tr>
-//   </thead>
+import TransactionHistoryItemTr from "./TransactionHistoryItemTr"
 
-//   <tbody>
-//     <tr>
-//       <td>Invoice</td>
-//       <td>125</td>
-//       <td>USD</td>
-//     </tr>
-//     <tr>
-//       <td>Withdrawal</td>
-//       <td>85</td>
-//       <td>USD</td>
-//     </tr>
-//   </tbody>
-// </table>
-//     </div>
-//   )
-// }
+const TransactionHistory = ({transactions}) => {
+  // const {type, amount,currency}= items
+  return (
+    <div>
+      <table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Amount</th>
+      <th>Currency</th>
+    </tr>
+  </thead>
 
-// export default TransactionHistory
+  <tbody>  
+    {transactions.map((item)=>{
+    return (<tr key={item.id}>      
+		<TransactionHistoryItemTr type ={item.type} amount={item.amount} currency={item.currency} />
+   </tr>
+   );
+    })}
+  </tbody>
+</table>
+    </div>
+  )
+}
+
+export default TransactionHistory
