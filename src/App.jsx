@@ -3,6 +3,7 @@
 // import viteLogo from '/vite.svg'
 import './App.css'
 
+// import {Profile, FriendList, TransactionHistory} from 'components'
 import Profile from './components/Profile/Profile'
 import FriendList from './components/FriendList/FriendList'
 import TransactionHistory from './components/TransactionHistory/TransactionHistory'
